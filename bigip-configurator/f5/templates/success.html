@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            text-align: center;
+            color: #00990a;
+        }
+
+        p {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{url_for('static', filename='f5.gif')}}" alt="f5" width="100" height="100" style="float:right">
+    <h1>F5 Configurator</h1>
+    <h2>Kerb to JWT</h2>
+    <h3>Configuration completed </h3>
+
+<p><b>The Service Name:</b>  {{ success_message.service_name }}</p>
+<p><b>The Virtual Address:</b>  {{ success_message.virtual_address }}</p>
+<p><b>The Audience:</b>  {{ success_message.audience }}</p>
+<p><b>The backend address:</b>  {{ success_message.backend_address }}</p>
+
+
+</body>
+</html>
